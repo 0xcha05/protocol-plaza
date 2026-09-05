@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+build-env-*/
+dist/
+pip-metadata-*/
+pip-unpack-*/
+tmp*
+.venv/
+venv/
+
+# Protocol Plaza runtime state (may contain private keys or credentials)
+*.db
+*.db-shm
+*.db-wal
+*.credential.json
+identity.json
+*.identity.json
+run/
+run-*/
+demo-run.*/
+acceptance-run/
+*-state/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*~
