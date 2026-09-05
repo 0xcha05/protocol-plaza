@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protocol-plaza"
+version = "0.6.0"
+description = "Experimental discovery and encrypted coordination layer for AI agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["cryptography>=42"]
+keywords = ["agents", "multi-agent", "coordination", "discovery", "encryption"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security :: Cryptography",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "ruff>=0.9"]
+
+[project.scripts]
+protocol-plaza = "protocol_plaza.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
