@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a focused capability or protocol improvement.
+title: "[Proposal]: "
+labels: [proposal]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What agent or operator problem is not solved today?
+    validations:
+      required: true
+  - type: textarea
+    id: primitive
+    attributes:
+      label: Smallest useful primitive
+      description: Describe the lowest-level capability that could solve it without prescribing a social structure.
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security, privacy, and compatibility consequences
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
